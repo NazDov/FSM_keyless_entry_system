@@ -1,6 +1,12 @@
 package com.fsm.entrysystemkeyless.util;
 
+<<<<<<< HEAD
 import android.content.Context;
+=======
+import android.annotation.TargetApi;
+import android.content.Context;
+import android.os.Build;
+>>>>>>> init commit
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,6 +23,10 @@ public class KESStatesJSONLoader {
 
     private String json;
 
+<<<<<<< HEAD
+=======
+    @TargetApi(Build.VERSION_CODES.KITKAT)
+>>>>>>> init commit
     public KESStatesJSONLoader(Context context, String jsonFileName) {
         try (BufferedReader br = new BufferedReader(
                 new InputStreamReader(openAssets(context, jsonFileName)))) {
