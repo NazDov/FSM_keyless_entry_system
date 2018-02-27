@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorWhite">#fff</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="controlWrapperBgColor">#fd1e0101</color>
+    <color name="controlWrapperBorderColor">#050000</color>
+    <color name="buttonWrapperBgColor">#dc251010</color>
+    <color name="buttonWrapperBorderColor">@color/controlWrapperBorderColor</color>
+    <color name="armedIndicatorColor">#e41b22</color>
+    <color name="disarmedIndicatorColor">#25e438</color>
+    <color name="active_btn_color">#323233</color>
+    <color name="inactive_btn_color">@color/buttonWrapperBgColor</color>
+</resources>

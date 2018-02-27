@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Keyless Entry System</string>
+    <string name="lock_tag">LOCK</string>
+    <string name="unlock_tag">UNLOCK</string>
+    <string name="lock2x_tag">LOCK2X</string>
+    <string name="unlock2x_tag">UNLOCK2x</string>
+    <string name="armed_indicator_tag">ARMED</string>
+    <string name="disarmed_indicator_tag">DISARMED</string>
+</resources>

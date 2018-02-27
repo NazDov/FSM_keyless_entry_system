@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.fsm.entrysystemkeyless"
+        minSdkVersion 15
+        //noinspection OldTargetApi
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+tasks.withType(Test) {
+    testLogging {
+        exceptionFormat "full"
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    testImplementation "org.robolectric:robolectric:3.7.1"
+    testImplementation "org.robolectric:robolectric-parent:3.1"
+    testImplementation 'org.robolectric:shadows-support-v4:3.0'
+    testImplementation 'org.mockito:mockito-core:2.7.22'
+}
+
+
+task run (type: Exec, dependsOn: 'installDebug') {
+    commandLine android.getAdbExecutable().toString(), "shell",
+            "monkey",
+            "-p", "com.fsm.entrysystemkeyless",
+            "-c", "android.intent.category.LAUNCHER", "1"
+}

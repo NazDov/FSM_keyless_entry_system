@@ -1,0 +1,20 @@
+{
+  "states": [
+    {
+      "name": "KESAlarmArmedAllLockedState",
+      "validationMsg": "Alarm is armed. All doors are locked."
+    },
+    {
+      "name": "KESAlarmDisarmedAllUnlockedState",
+      "validationMsg": "Alarm is disarmed. All doors are unlocked."
+    },
+    {
+      "name": "KESAlarmDisarmedDriverUnlockedState",
+      "validationMsg": "Alarm is disarmed. Driver door is unlocked. Passenger door is locked"
+    },
+    {
+      "name": "KESAlarmDisarmedAllLockedState",
+      "validationMsg": "Alarm is disarmed. All doors are locked."
+    }
+  ]
+}
